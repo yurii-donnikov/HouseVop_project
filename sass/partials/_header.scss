@@ -1,0 +1,121 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 4;
+    padding: 0 0 5px 0;
+    background-color: #242b33;
+
+    .header_content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .header_logo {
+            margin: 10px 0 0 0;
+
+            .logo {
+                height: 25px;
+                width: 130px;
+                position: relative;
+                display: block;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            h1 {
+                @include styleP;
+                font-size: 12px;
+                margin: 15px 0 0 0;
+            }
+        }
+
+        .header_menu {
+            display: flex;
+
+            @media (max-width: 768px) {
+                position: absolute;
+                bottom: -200px;
+                left: 0;
+                height: 200px;
+                width: 100%;
+                background-color: #242b33;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                transform: translate(0, -150%);
+            }
+
+            li {
+                margin: 0 10px;
+
+                a {
+                    @include styleP;
+                    font-size: 14px;
+                    letter-spacing: 0.05em;
+
+                    &:hover {
+                        color: #D4C17F;
+                    }
+                }
+
+                .header_activ {
+                    color: #D4C17F;
+                    pointer-events: none;
+                }
+            }
+        }
+
+        .button_active {
+            transition: all 0.3s ease-out;
+            transform: translate(0, 0);
+            border-bottom: 1px solid #000;
+        }
+
+        .buttonMenu {
+            position: relative;
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 32px;
+            height: 32px;
+            box-sizing: border-box;
+            display: none;
+
+            @media (max-width: 768px) {
+                display: flex;
+            }
+
+            .topBut {
+                display: block;
+                position: relative;
+                width: 30px;
+                height: 3px;
+                background-color: #fff;
+                transition: all 0.3s ease 0s;
+            }
+
+            .centerBut {
+                display: block;
+                position: relative;
+                width: 30px;
+                height: 3px;
+                background-color: #fff;
+            }
+
+            .buttomBut {
+                display: block;
+                position: relative;
+                width: 30px;
+                height: 3px;
+                background-color: #fff;
+                transition: all 0.3s ease 0s;
+            }
+        }
+    }
+}

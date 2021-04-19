@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&family=Raleway&display=swap');
+@import "./fonts.scss";
+@import "./global/reset.scss";
+@import "./global/var.scss";
+@import "./global/styles.scss";
+@import "./partials/header.scss";
+@import "./partials/main.scss";
+@import "./partials/main_top.scss";
+@import "./partials/main_center.scss";
+@import "./partials/main_bottom.scss";
+@import "./partials/footer.scss";
+
+@import "./partials/main_location_map.scss";
+@import "./partials/_main_apartment.scss";
+
+@import "../node_modules/slick-carousel/slick/slick.scss";

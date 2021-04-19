@@ -1,0 +1,78 @@
+.main_apartment {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 20px 0;
+    background-color: #242b33;
+
+    .apartment_content {
+        display: block;
+        position: relative;
+
+        h2 {
+            @include styleH2;
+            margin: 20px 0;
+
+            @media (max-width: 540px) {
+                font-size: 25px;
+            }
+        }
+
+        .apartment_cart {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+
+            div {
+
+                width: 30%;
+                height: 100%;
+                box-sizing: border-box;
+                border: 1px solid #383c41;
+                background-color: #292f35;
+                margin: 1.5% 1.5%;
+
+                @media (max-width: 540px) {
+                    width: 45%;
+                }
+
+                a {
+                    display: block;
+                    width: 90%;
+                    margin: 10px auto;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                ul {
+                    display: block;
+
+                    li {
+                        @include styleP;
+                        margin: 5px 15px;
+
+                        @media (max-width: 540px) {
+                            font-size: 15px;
+                        }
+
+                        @media (max-width: 414px) {
+                            font-size: 13px;
+                        }
+
+                        &:last-child {
+                            color: red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
